@@ -1,0 +1,82 @@
+
+#game {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 150%;
+    text-shadow: 2px 2px silver;
+    width: 500px;
+    height: 200px;
+    border: 2px inset rgba(0, 0, 0, 0.438);
+    margin: auto;
+    position: relative;
+    padding-top: 20px;
+   color: rgb(199, 12, 12); 
+    background-color: rgba(216, 185, 185, 0.842);
+    text-align: center;
+}
+img[alt="background"] {
+position: absolute;
+top: 0;
+left: 0;
+width: 500px;
+height: 220px;
+opacity: 0.8;
+}
+
+img[alt="obstacle"] {
+    width: 50px;
+    height: 50px;
+}
+
+.count {
+    position: absolute;
+    top: 10%;
+    left: 47%;
+    font-size: 40px;
+    font-weight: 900;
+    color: rgb(245, 199, 199);
+    text-shadow: 1px 1px black;
+    
+}
+
+#character {
+    width: 50px;
+    height: 100px;
+    position: relative;
+    top: 100px;
+}
+
+.first {
+    width: 50px;
+    height: 100px;
+}
+@keyframes jump{
+    0% {top: 100px;}
+    30% {top: 20px;}
+    70% {top: 20px;}
+    100% {top: 100px;}
+}
+
+.animate {
+    animation: jump 600ms linear;
+}
+
+#block {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 50px;
+    left: 450px;
+    animation: block 1.5s infinite linear;
+}
+#blockTwo {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    top: 65px;
+    left: 465px;
+}
+
+@keyframes block {
+    0%{ left: 465px;}
+    100%{ left: -35px;}
+}
