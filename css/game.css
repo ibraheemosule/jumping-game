@@ -1,4 +1,49 @@
 
+#playGame {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 150%;
+    text-shadow: 1.2px 1.2px silver;
+    width: 500px;
+    height: 200px;
+    border: 2px solid rgba(0, 0, 0, 0.438);
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px black;
+    margin: auto;
+    position: relative;
+    padding-top: 0px;
+   color: rgb(55, 61, 3); 
+    background-color: rgba(112, 154, 202, 0.555);
+    text-align: center;
+    display: block;
+}
+
+h6 {
+    color: rgb(139, 8, 8); 
+    text-shadow: 1.2px 1.2px rgb(42, 41, 41);
+}
+
+#playGame p{
+    margin-bottom: 10px;
+    font-size: 80%;
+}
+#playGame p:nth-child(3){
+    font-size: 50%;
+}
+
+button {
+    background-color: rgb(6, 153, 43);
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: all 0.75s ease;
+}
+button:hover {
+    cursor: pointer;
+    color: black;
+    background-color: rgb(131, 241, 154);
+}
+
 #game {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 150%;
@@ -6,12 +51,14 @@
     width: 500px;
     height: 200px;
     border: 2px inset rgba(0, 0, 0, 0.438);
+    box-shadow: 5px 5px 5px black;
     margin: auto;
     position: relative;
     padding-top: 20px;
    color: rgb(199, 12, 12); 
-    background-color: rgba(216, 185, 185, 0.842);
+    background-color: rgba(246, 246, 246, 0.431);
     text-align: center;
+    display: none;
 }
 img[alt="background"] {
 position: absolute;
@@ -33,7 +80,7 @@ img[alt="obstacle"] {
     left: 47%;
     font-size: 40px;
     font-weight: 900;
-    color: rgb(245, 199, 199);
+    color: rgb(253, 253, 253);
     text-shadow: 1px 1px black;
     
 }
