@@ -17,18 +17,18 @@ const jump = () => {
   let count = document.getElementsByClassName("count")[0];
   let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
   count.innerHTML = parseInt(count.innerHTML) + 1;
-  if(count.innerHTML <= 10 ){
-block.style.animationDuration = "1.4"+(10-count.innerHTML)+"s";
-  } else if(count.innerHTML <= 20 ){
-    block.style.animationDuration = "1.3"+(20-count.innerHTML)+"s";
-    } else if(count.innerHTML <= 30 ){
-    block.style.animationDuration = "1.2"+(30-count.innerHTML)+"s";
-    } else if(count.innerHTML <= 40 ){
-    block.style.animationDuration = "1.1"+(40-count.innerHTML)+"s";
-    } else if(count.innerHTML <= 50 ) {
-    block.style.animationDuration = "1.0"+(50-count.innerHTML)+"s";
-  } else if(count.innerHTML <= 60 ) {
-    block.style.animationDuration = "0."+(60-count.innerHTML)+"s";
+  if(count.innerHTML <= 20 ){
+block.style.animationDuration = "1.4"+(((10-(count.innerHTML / 2))*10).toLocaleString(undefined, {minimumIntegerDigits: 2}))+"s";
+  } else if(count.innerHTML <= 40 ){
+    block.style.animationDuration = "1.3"+(((20-(count.innerHTML / 2))*10).toLocaleString(undefined, {minimumIntegerDigits: 2}))+"s";
+    } else if(count.innerHTML <= 60 ){
+    block.style.animationDuration = "1.2"+(((30-(count.innerHTML / 2))*10).toLocaleString(undefined, {minimumIntegerDigits: 2}))+"s";
+    } else if(count.innerHTML <= 80 ){
+    block.style.animationDuration = "1.1"+(((40-(count.innerHTML / 2))*10).toLocaleString(undefined, {minimumIntegerDigits: 2}))+"s";
+    } else if(count.innerHTML <= 100 ) {
+    block.style.animationDuration = "1.0"+(((50-(count.innerHTML / 2))*10).toLocaleString(undefined, {minimumIntegerDigits: 2}))+"s";
+  } else if(count.innerHTML <= 120 ) {
+    block.style.animationDuration = "0."+(((60-(count.innerHTML / 2))*10).toLocaleString(undefined, {minimumIntegerDigits: 2}))+"s";
       };
 
 if(character.classList == "animate") {return;};
