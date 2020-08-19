@@ -52,7 +52,7 @@ const gameOver = () => {
       document.getElementById("game").style.borderRadius = "20px";
       document.getElementById("game").style.boxShadow = "5px 5px 5px black";
         document.getElementById("game").innerHTML = "GAME OVER!! Your Score is "+
-        document.getElementsByClassName("count")[0].innerHTML + "<br><br><br><br><br> <button onclick = ' document.location.reload()'>PLAY AGAIN</button>";
+        document.getElementsByClassName("count")[0].innerHTML + "<br><br><br><br><br> <button onclick = 'document.location.reload()'>PLAY AGAIN</button>";
  
       
     }, 200);  

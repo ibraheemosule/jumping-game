@@ -1,5 +1,6 @@
 
 #playGame {
+   
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 150%;
     text-shadow: 1.2px 1.2px silver;
@@ -9,6 +10,7 @@
     border-radius: 20px;
     box-shadow: 5px 5px 5px black;
     margin: auto;
+    margin-top: 10%;
     position: relative;
     padding-top: 0px;
    color: rgb(55, 61, 3); 
@@ -53,6 +55,7 @@ button:hover {
     border: 2px inset rgba(0, 0, 0, 0.438);
     box-shadow: 5px 5px 5px black;
     margin: auto;
+    margin-top: 10%;
     position: relative;
     padding-top: 20px;
    color: rgb(199, 12, 12); 
