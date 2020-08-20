@@ -55,7 +55,7 @@ const gameOver = () => {
         document.getElementsByClassName("count")[0].innerHTML + "<br><br><br><br><br> <button onclick = 'document.location.reload()'>PLAY AGAIN</button>";
  
       
-    }, 200);  
+    }, 100);  
     clearInterval(interval);
     }
  
