@@ -1,4 +1,3 @@
-
 let playGame = document.getElementById("playGame");
 let button = document.getElementsByTagName("button")[0];
 let game = document.getElementById("game");
@@ -42,22 +41,40 @@ const removeJump = () => {
  character.classList.remove("animate");
 }
 
+let score = document.getElementsByClassName('count')[0];
+//  localStorage.clear()
 const gameOver = () => {
     let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+    
+    let highScore = parseInt(score.innerHTML);
+
     if(blockLeft < 30 && blockLeft > -30 && characterTop >=50){
+
     setTimeout(() => {
+          let previousScore =  localStorage.getItem('yes');
+        
+        if(highScore > previousScore || previousScore == null){
+         localStorage.setItem("u",score.innerHTML)
+       newHighScore = highScore;
+       console.log(newHighScore);
+         localStorage.setItem('yes',newHighScore);
+        } else {
+            newHighScore = previousScore;
+        }
+      
       let block = document.getElementsByTagName("div")[3];
         block.setAttribute("id", "blockTwo");
       document.getElementById("game").style.borderRadius = "20px";
       document.getElementById("game").style.boxShadow = "5px 5px 5px black";
         document.getElementById("game").innerHTML = "GAME OVER!! Your Score is "+
-        document.getElementsByClassName("count")[0].innerHTML + "<br><br><br><br><br> <button onclick = 'document.location.reload()'>PLAY AGAIN</button>";
- 
-      
+        document.getElementsByClassName("count")[0].innerHTML + "<br><br>HIGH SCORE:"+" "+newHighScore+"<br><br><br> <button onclick = 'document.location.reload()'>PLAY AGAIN</button>";
+
     }, 100);  
     clearInterval(interval);
     }
- 
 };
 let interval = setInterval(gameOver, 10);
+
+
+
