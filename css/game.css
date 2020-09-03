@@ -134,7 +134,10 @@ img[alt="obstacle"] {
 
 @media screen and (max-width: 700px){
 
-    #playGame, #game {
+    #playGame{
         margin-top: 3%;
+    }
+    #game {
+        margin-top: 1%;
     }
 }
