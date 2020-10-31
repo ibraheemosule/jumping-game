@@ -3,12 +3,11 @@
    
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 150%;
-    text-shadow: 1.2px 1.2px silver;
+    text-shadow: 0.5px 0.5px silver;
     width: 500px;
     height: 200px;
     border: 2px solid rgba(0, 0, 0, 0.438);
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px black;
+    border-radius: 15px;
     margin: auto;
     margin-top: 10%;
     position: relative;
@@ -20,8 +19,7 @@
 }
 
 h6 {
-    color: rgb(139, 8, 8); 
-    text-shadow: 1.2px 1.2px rgb(42, 41, 41);
+    color: rgba(139, 8, 8, 0.604); 
     margin-bottom: 3px;
 }
 
@@ -50,16 +48,15 @@ button:hover {
 #game {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 150%;
-    text-shadow: 2px 2px silver;
     width: 500px;
     height: 200px;
     border: 2px inset rgba(0, 0, 0, 0.438);
-    box-shadow: 5px 5px 5px black;
+    box-shadow: 1px 1px 1px black;
     margin: auto;
     margin-top: 10%;
     position: relative;
     padding-top: 20px;
-   color: rgb(199, 12, 12); 
+   color: rgba(199, 12, 12, 0.535); 
     background-color: rgba(246, 246, 246, 0.431);
     text-align: center;
     display: none;

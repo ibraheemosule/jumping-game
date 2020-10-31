@@ -14,8 +14,10 @@ let character = document.getElementById("character");
 const jump = () => {
   let block = document.getElementById("block");
   let count = document.getElementsByClassName("count")[0];
-  let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
-  count.innerHTML = parseInt(count.innerHTML) + 1;
+  if(block){
+  let blockLeft = parseInt(window.getComputedStyle(block, null).getPropertyValue("left"));
+  if(blockLeft <200) count.innerHTML = parseInt(count.innerHTML) + 1;
+
   if(count.innerHTML <= 20 ){
 block.style.animationDuration = "1.4"+(((10-(count.innerHTML / 2))*10).toLocaleString(undefined, {minimumIntegerDigits: 2}))+"s";
   } else if(count.innerHTML <= 40 ){
@@ -29,13 +31,14 @@ block.style.animationDuration = "1.4"+(((10-(count.innerHTML / 2))*10).toLocaleS
   } else if(count.innerHTML <= 120 ) {
     block.style.animationDuration = "0."+(((60-(count.innerHTML / 2))*10).toLocaleString(undefined, {minimumIntegerDigits: 2}))+"s";
       };
+    }
 
 if(character.classList == "animate") {return;};
  character.classList.add("animate");
  setTimeout(removeJump, 600);
 };
 
-character.addEventListener("click", jump);
+game.addEventListener("click", jump);
 
 const removeJump = () => {
  character.classList.remove("animate");
@@ -45,7 +48,7 @@ let score = document.getElementsByClassName('count')[0];
 //  localStorage.clear()
 const gameOver = () => {
     let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
-    let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+    let blockLeft = parseInt(window.getComputedStyle(block,).getPropertyValue("left"));
     
     let highScore = parseInt(score.innerHTML);
 
@@ -66,7 +69,7 @@ const gameOver = () => {
       let block = document.getElementsByTagName("div")[3];
         block.setAttribute("id", "blockTwo");
       document.getElementById("game").style.borderRadius = "20px";
-      document.getElementById("game").style.boxShadow = "5px 5px 5px black";
+      document.getElementById("game").style.boxShadow = "1px 1px 1px black";
         document.getElementById("game").innerHTML = "GAME OVER!! Your Score is "+
         document.getElementsByClassName("count")[0].innerHTML + "<br><br>HIGH SCORE:"+" "+newHighScore+"<br><br><br> <button onclick = 'document.location.reload()'>PLAY AGAIN</button>";
 
